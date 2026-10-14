@@ -1,23 +1,21 @@
-class Werknemer{
-    constructor(naam,salaris){
-        this.naam=naam
-        this.salaris=salaris
-    }
-    getDetails(){
-        return `${this.naam} verdient €${this.salaris} per maand.`
-    }
+class Werknemer {
+  constructor(naam, salaris) {
+    this.naam = naam;
+    this.salaris = salaris;
+  }
+  getDetails() {
+    return `${this.naam} verdient €${this.salaris} per maand.`;
+  }
 }
-class Manager extends Werknemer{
-    constructor(naam,salaris,bonus){
-        super(naam,salaris)
-        this.bonus=bonus
-    }
-    getDetails(){
-        return super.getDetails()+` (bonus: ${this.bonus})`
-    }
+class Manager extends Werknemer {
+  constructor(naam, salaris, bonus) {
+    super(naam, salaris);
+    this.bonus = bonus;
+  }
+  getDetails() {
+    return super.getDetails() + ` (bonus: ${this.bonus})`;
+  }
 }
-
-
 
 const medewerker = new Werknemer("Jan", 3000);
 console.log(medewerker.getDetails());
